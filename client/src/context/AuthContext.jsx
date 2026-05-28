@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
   const [error, setError] = useState('');
 
  
-const API_URL = "https://entireskills-hub2-026.onrender.com";
+const API_URL = "https://entireskills-hub2-026.onrender.com/api";
 
 
   useEffect(() => {
