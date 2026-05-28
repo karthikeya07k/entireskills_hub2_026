@@ -10,7 +10,9 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
-  const API_URL = 'https://onrender.com/api';
+ 
+const API_URL = "https://entireskills-hub2-026.onrender.com";
+
 
   useEffect(() => {
     const loadUser = async () => {
