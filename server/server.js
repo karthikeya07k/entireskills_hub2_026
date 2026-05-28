@@ -12,11 +12,7 @@ const app = express();
 connectDB();
 
 // Middleware
-app.use(cors({
-  origin: '*', // ఇది ఏ వెబ్‌సైట్ నుండి అయినా రిక్వెస్ట్ లని అనుమతిస్తుంది
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
-  credentials: true
-}));
+app.use(cors({ origin: '*', credentials: true }));
 
 app.use(express.json());
 

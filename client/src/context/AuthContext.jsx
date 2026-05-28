@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
-  const API_URL = 'http://localhost:5000/api';
+  const API_URL = 'https://onrender.com/api';
 
   useEffect(() => {
     const loadUser = async () => {
