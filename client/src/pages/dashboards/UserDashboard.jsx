@@ -7,33 +7,30 @@ import {
 } from 'lucide-react';
 
 const PRACTICAL_TRACKS = [
-  'Tailoring',
-  'Textiles',
-  'Cooking',
-  'Food Processing',
-  'Local Retail',
-  'Digital Content Creation',
-  'Appliance Repair Services'
+  'Apparel Design & Sustainable Fashion Tech',
+  'Culinary Arts, Cloud Kitchens & Commercial Catering',
+  'Micro-Retail Operations & Supply Chain Management',
+  'Digital Branding, Content Strategy & Freelance Agency',
+  'Consumer Electronics, Maintenance & Technical Services',
+  'Handicrafts Artistry, Upcycled Decor & Micro-Manufacturing'
 ];
 
 const TRACK_ICONS = {
-  'Tailoring': Scissors,
-  'Textiles': Shirt,
-  'Cooking': Utensils,
-  'Food Processing': ChefHat,
-  'Local Retail': Store,
-  'Digital Content Creation': Smartphone,
-  'Appliance Repair Services': Wrench
+  'Apparel Design & Sustainable Fashion Tech': Scissors,
+  'Culinary Arts, Cloud Kitchens & Commercial Catering': Utensils,
+  'Micro-Retail Operations & Supply Chain Management': Store,
+  'Digital Branding, Content Strategy & Freelance Agency': Smartphone,
+  'Consumer Electronics, Maintenance & Technical Services': Wrench,
+  'Handicrafts Artistry, Upcycled Decor & Micro-Manufacturing': Sparkles
 };
 
 const TRACK_COLORS = {
-  'Tailoring': 'text-indigo-600 bg-indigo-50 border-indigo-100',
-  'Textiles': 'text-blue-600 bg-blue-50 border-blue-100',
-  'Cooking': 'text-amber-600 bg-amber-50 border-amber-100',
-  'Food Processing': 'text-orange-600 bg-orange-50 border-orange-100',
-  'Local Retail': 'text-emerald-600 bg-emerald-50 border-emerald-100',
-  'Digital Content Creation': 'text-purple-600 bg-purple-50 border-purple-100',
-  'Appliance Repair Services': 'text-cyan-600 bg-cyan-50 border-cyan-100'
+  'Apparel Design & Sustainable Fashion Tech': 'text-indigo-600 bg-indigo-50 border-indigo-100',
+  'Culinary Arts, Cloud Kitchens & Commercial Catering': 'text-amber-600 bg-amber-50 border-amber-100',
+  'Micro-Retail Operations & Supply Chain Management': 'text-emerald-600 bg-emerald-50 border-emerald-100',
+  'Digital Branding, Content Strategy & Freelance Agency': 'text-purple-600 bg-purple-50 border-purple-100',
+  'Consumer Electronics, Maintenance & Technical Services': 'text-cyan-600 bg-cyan-50 border-cyan-100',
+  'Handicrafts Artistry, Upcycled Decor & Micro-Manufacturing': 'text-orange-600 bg-orange-50 border-orange-100'
 };
 
 export default function UserDashboard() {

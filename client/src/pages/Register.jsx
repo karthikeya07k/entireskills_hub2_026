@@ -4,13 +4,12 @@ import { useAuth } from '../context/AuthContext';
 import { Award, Lock, Mail, User as UserIcon, AlertCircle, Check, ArrowRight, UserPlus } from 'lucide-react';
 
 const PRACTICAL_TRACKS = [
-  'Tailoring',
-  'Textiles',
-  'Cooking',
-  'Food Processing',
-  'Local Retail',
-  'Digital Content Creation',
-  'Appliance Repair Services'
+  'Apparel Design & Sustainable Fashion Tech',
+  'Culinary Arts, Cloud Kitchens & Commercial Catering',
+  'Micro-Retail Operations & Supply Chain Management',
+  'Digital Branding, Content Strategy & Freelance Agency',
+  'Consumer Electronics, Maintenance & Technical Services',
+  'Handicrafts Artistry, Upcycled Decor & Micro-Manufacturing'
 ];
 
 export default function Register() {

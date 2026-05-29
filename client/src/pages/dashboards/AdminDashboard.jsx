@@ -376,7 +376,7 @@ export default function AdminDashboard() {
                     required
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
-                    placeholder="e.g. Appliance Repair Services"
+                    placeholder="e.g. Smart-Home Appliance Repair, Maintenance & Technical Support Services"
                     className="block w-full border border-slate-200 rounded-xl p-3 text-base focus:ring-2 focus:ring-primary-500 focus:outline-none hover:border-slate-300 transition-all shadow-sm"
                   />
                 </div>
@@ -400,7 +400,7 @@ export default function AdminDashboard() {
                     required
                     value={matchingSkillsText}
                     onChange={(e) => setMatchingSkillsText(e.target.value)}
-                    placeholder="e.g. Appliance Repair Services, Retail"
+                    placeholder="e.g. Consumer Electronics, Maintenance & Technical Services, Micro-Retail Operations & Supply Chain Management"
                     className="block w-full border border-slate-200 rounded-xl p-3 text-base focus:ring-2 focus:ring-primary-500 focus:outline-none hover:border-slate-300 transition-all shadow-sm"
                   />
                 </div>
