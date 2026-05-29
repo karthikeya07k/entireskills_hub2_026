@@ -268,7 +268,203 @@ const seedData = async () => {
     ideaC.lessonTrackId = lessonC._id;
     await ideaC.save();
 
-    // 5. Seed some initial messages to populate student/mentor chats
+
+    // 5. Track D: Handmade Crafts & Upcycled Home Decor Business
+    const ideaD = new BusinessIdea({
+      title: 'Handmade Crafts & Upcycled Home Decor Business',
+      description: 'Design and sell unique, eco-friendly crafts and upcycled home decorations to online buyers and craft exhibitions.',
+      matchingSkills: ['Textiles', 'Local Retail']
+    });
+    await ideaD.save();
+
+    const roadmapD = new Roadmap({
+      businessIdeaId: ideaD._id,
+      steps: [
+        {
+          stepNumber: 1,
+          title: 'Resource Sourcing & Eco-Friendly Material Supply Chains',
+          description: 'Identify suppliers of sustainable materials, verify their green certifications, audit supply chain economics, and draft sourcing sheets.',
+          toolsRequired: ['Eco-Material Audit List', 'Supplier Survey Sheets'],
+          estimatedCost: 500,
+          isCompleted: false
+        },
+        {
+          stepNumber: 2,
+          title: 'Product Design Prototyping & Quality Control Checklists',
+          description: 'Develop initial product samples, conduct quality inspections for structural durability, and create standard quality control checklist templates.',
+          toolsRequired: ['Prototyping Kit', 'QC Checklist Templates'],
+          estimatedCost: 2000,
+          isCompleted: false
+        },
+        {
+          stepNumber: 3,
+          title: 'E-Commerce Store Setup & Local Craft Exhibition Marketing',
+          description: 'Deploy online store pages, manage digital payments, secure registry booths at regional craft fairs, and print product catalog cards.',
+          toolsRequired: ['Shopify Portal', 'Exhibition Registry Forms', 'Flyers'],
+          estimatedCost: 1500,
+          isCompleted: false
+        }
+      ]
+    });
+    await roadmapD.save();
+
+    const lessonD = new Lesson({
+      businessIdeaId: ideaD._id,
+      modules: [
+        {
+          moduleTitle: 'Sourcing Recycled & Green Materials',
+          durationText: '10 mins',
+          contentType: 'article_markdown',
+          resourceUrl: '',
+          summaryBody: '### Building Eco-Friendly Networks\nLearn how to evaluate upcycled textiles and natural wood elements. Keep safety records for all upcycled elements and verify that supply chains remain local to reduce shipping footprint.'
+        },
+        {
+          moduleTitle: 'Craft Fair & E-Commerce Marketing Guide',
+          durationText: '15 mins',
+          contentType: 'video_embed',
+          resourceUrl: 'https://www.youtube.com/embed/P1G3MugG9o0',
+          summaryBody: 'A video explaining how to style tables at craft fairs, draft email campaign newsletters, and photograph handmade products under natural lighting.'
+        }
+      ]
+    });
+    await lessonD.save();
+
+    ideaD.roadmapId = roadmapD._id;
+    ideaD.lessonTrackId = lessonD._id;
+    await ideaD.save();
+
+
+    // 6. Track E: Mobile & Electronics Appliance Repair Agency
+    const ideaE = new BusinessIdea({
+      title: 'Mobile & Electronics Appliance Repair Agency',
+      description: 'Set up a professional diagnostic repair center offering servicing for smartphones, tablets, and domestic home electronics.',
+      matchingSkills: ['Appliance Repair Services']
+    });
+    await ideaE.save();
+
+    const roadmapE = new Roadmap({
+      businessIdeaId: ideaE._id,
+      steps: [
+        {
+          stepNumber: 1,
+          title: 'Basic Diagnostic Equipment Procurement & Toolset Setup',
+          description: 'Procure diagnostic oscilloscopes, thermal cameras, high-precision soldering irons, screwdriver sets, and ESD safety mats.',
+          toolsRequired: ['Digital Oscilloscope', 'Soldering Station', 'Screwdriver Set', 'ESD Mat'],
+          estimatedCost: 8000,
+          isCompleted: false
+        },
+        {
+          stepNumber: 2,
+          title: 'Component Sourcing Partnerships & Service Menu Pricing',
+          description: 'Establish contracts with original electronic part suppliers, define standard repair service pricing menus, and layout intake forms.',
+          toolsRequired: ['Intake Form Templates', 'Supplier Contract Spreadsheet'],
+          estimatedCost: 1000,
+          isCompleted: false
+        },
+        {
+          stepNumber: 3,
+          title: 'Neighborhood Flyer Distribution & Digital Business Map Listing',
+          description: 'Deploy business listings on local mapping engines, launch search campaign ads, and print marketing service flyer brochures.',
+          toolsRequired: ['Google Maps Listing', 'Neighborhood Flyer Templates'],
+          estimatedCost: 500,
+          isCompleted: false
+        }
+      ]
+    });
+    await roadmapE.save();
+
+    const lessonE = new Lesson({
+      businessIdeaId: ideaE._id,
+      modules: [
+        {
+          moduleTitle: 'ESD Safety & Diagnostic Equipment Setup',
+          durationText: '15 mins',
+          contentType: 'article_markdown',
+          resourceUrl: '',
+          summaryBody: '### Setting Up a Safe Workstation\nLearn standard static-safe ESD workspace separation. Configure thermal inspection cameras to locate short circuits on mobile power ICs.'
+        },
+        {
+          moduleTitle: 'Precision Micro-Soldering Techniques',
+          durationText: '20 mins',
+          contentType: 'video_embed',
+          resourceUrl: 'https://www.youtube.com/embed/jZ_y-l842-I',
+          summaryBody: 'A video explaining correct usage of solder flux, hot-air gun temperatures (350°C-380°C), and magnifying lens alignment for connector port replacements.'
+        }
+      ]
+    });
+    await lessonE.save();
+
+    ideaE.roadmapId = roadmapE._id;
+    ideaE.lessonTrackId = lessonE._id;
+    await ideaE.save();
+
+
+    // 7. Track F: Professional Graphic Design & Social Media Management
+    const ideaF = new BusinessIdea({
+      title: 'Professional Graphic Design & Social Media Management',
+      description: 'Provide high-quality custom graphics, layout branding visual packages, and run social accounts for companies and shops.',
+      matchingSkills: ['Digital Content Creation']
+    });
+    await ideaF.save();
+
+    const roadmapF = new Roadmap({
+      businessIdeaId: ideaF._id,
+      steps: [
+        {
+          stepNumber: 1,
+          title: 'Design Software Suite Licensing & Portfolio Showcase Creation',
+          description: 'Obtain cloud service software licensing, build design portfolios showcasing visual layouts, and publish services.',
+          toolsRequired: ['Creative Cloud Subscription', 'Behance Portfolio Space'],
+          estimatedCost: 3000,
+          isCompleted: false
+        },
+        {
+          stepNumber: 2,
+          title: 'Service Contract Templates & Standard Operating Procedures',
+          description: 'Draft legal design service agreement templates, layout revisions policies, and write standard onboarding questionnaires.',
+          toolsRequired: ['Design Agreement Templates', 'Onboarding Questionnaire Sheets'],
+          estimatedCost: 0,
+          isCompleted: false
+        },
+        {
+          stepNumber: 3,
+          title: 'Freelance Platform Bidding Setup & Cold-Email Outreach Strategy',
+          description: 'Register listings on major global freelance bidding boards, launch cold email marketing outreach, and compile outreach metrics sheets.',
+          toolsRequired: ['Upwork Account', 'Cold Outreach Templates', 'Metrics Spreadsheets'],
+          estimatedCost: 200,
+          isCompleted: false
+        }
+      ]
+    });
+    await roadmapF.save();
+
+    const lessonF = new Lesson({
+      businessIdeaId: ideaF._id,
+      modules: [
+        {
+          moduleTitle: 'Drafting Legal Design Service Agreements',
+          durationText: '10 mins',
+          contentType: 'article_markdown',
+          resourceUrl: '',
+          summaryBody: '### Client Agreement Guidelines\nDefine standard client visual asset ownership rights. Include clause details for revision round caps, deposit requirements (50% upfront), and payment milestones.'
+        },
+        {
+          moduleTitle: 'Brand Identity Design and Vector Layouts',
+          durationText: '18 mins',
+          contentType: 'video_embed',
+          resourceUrl: 'https://www.youtube.com/embed/P1G3MugG9o0',
+          summaryBody: 'A video explaining vector pen paths, typography branding guides, layout alignments, and selecting color palettes to match client industry guidelines.'
+        }
+      ]
+    });
+    await lessonF.save();
+
+    ideaF.roadmapId = roadmapF._id;
+    ideaF.lessonTrackId = lessonF._id;
+    await ideaF.save();
+
+
+    // 8. Seed some initial messages to populate student/mentor chats
     const studentUser = seededUsers.find(u => u.role === 'user');
     const chefMentor = seededUsers.find(u => u.email === 'chef.raj@entreskill.com');
     const tailoringMentor = seededUsers.find(u => u.email === 'designer.maria@entreskill.com');

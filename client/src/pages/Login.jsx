@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { Award, Lock, Mail, AlertCircle, ArrowRight, UserCheck, ShieldAlert, LogIn } from 'lucide-react';
+import { Award, Lock, Mail, AlertCircle, ArrowRight, LogIn } from 'lucide-react';
 
 export default function Login() {
   const { login, error } = useAuth();
@@ -23,11 +23,6 @@ export default function Login() {
     } finally {
       setLoading(false);
     }
-  };
-
-  const handleQuickLogin = (demoEmail) => {
-    setEmail(demoEmail);
-    setPassword('password123');
   };
 
   return (
@@ -136,82 +131,6 @@ export default function Login() {
             <Link to="/register" className="text-sm font-bold text-primary-600 hover:text-primary-700 transition-colors">
               Create an account now
             </Link>
-          </div>
-
-          {/* Testing and Demo Quick-Fill Section */}
-          <div className="mt-10 pt-8 border-t border-slate-100 space-y-4">
-            <div className="text-center space-y-1">
-              <h4 className="text-sm font-bold uppercase tracking-wider text-slate-400 flex items-center justify-center space-x-1">
-                <UserCheck className="w-3.5 h-3.5 text-primary-500" />
-                <span>Developer Sandbox Quick-Login</span>
-              </h4>
-              <p className="text-xs text-slate-400 font-medium">Click below to automatically fill credentials and log in instantly.</p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 w-full">
-              <button
-                type="button"
-                onClick={() => handleQuickLogin('student@entreskill.com')}
-                className="group flex items-center justify-between p-3.5 border border-slate-200 rounded-xl hover:bg-slate-50 text-slate-700 font-bold text-sm transition-all hover:border-primary-400 shadow-sm"
-              >
-                <div className="text-left min-w-0">
-                  <p className="text-slate-900 group-hover:text-primary-600 truncate transition-colors text-sm font-bold">Alex Johnson</p>
-                  <p className="text-xs text-slate-400 font-medium uppercase tracking-wider mt-0.5">Student Role</p>
-                </div>
-                <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-primary-500 group-hover:translate-x-0.5 transition-all" />
-              </button>
-
-              <button
-                type="button"
-                onClick={() => handleQuickLogin('designer.maria@entreskill.com')}
-                className="group flex items-center justify-between p-3.5 border border-slate-200 rounded-xl hover:bg-slate-50 text-slate-700 font-bold text-sm transition-all hover:border-primary-400 shadow-sm"
-              >
-                <div className="text-left min-w-0">
-                  <p className="text-slate-900 group-hover:text-primary-600 truncate transition-colors text-sm font-bold">Maria Santos</p>
-                  <p className="text-xs text-emerald-600 font-medium uppercase tracking-wider mt-0.5">Tailoring Expert</p>
-                </div>
-                <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-primary-500 group-hover:translate-x-0.5 transition-all" />
-              </button>
-
-              <button
-                type="button"
-                onClick={() => handleQuickLogin('chef.raj@entreskill.com')}
-                className="group flex items-center justify-between p-3.5 border border-slate-200 rounded-xl hover:bg-slate-50 text-slate-700 font-bold text-sm transition-all hover:border-primary-400 shadow-sm"
-              >
-                <div className="text-left min-w-0">
-                  <p className="text-slate-900 group-hover:text-primary-600 truncate transition-colors text-sm font-bold">Chef Raj Patel</p>
-                  <p className="text-xs text-emerald-600 font-medium uppercase tracking-wider mt-0.5">Culinary Advisor</p>
-                </div>
-                <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-primary-500 group-hover:translate-x-0.5 transition-all" />
-              </button>
-
-              <button
-                type="button"
-                onClick={() => handleQuickLogin('marketer.sam@entreskill.com')}
-                className="group flex items-center justify-between p-3.5 border border-slate-200 rounded-xl hover:bg-slate-50 text-slate-700 font-bold text-sm transition-all hover:border-primary-400 shadow-sm"
-              >
-                <div className="text-left min-w-0">
-                  <p className="text-slate-900 group-hover:text-primary-600 truncate transition-colors text-sm font-bold">Sam Wilson</p>
-                  <p className="text-xs text-emerald-600 font-medium uppercase tracking-wider mt-0.5">Marketing Advisor</p>
-                </div>
-                <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-primary-500 group-hover:translate-x-0.5 transition-all" />
-              </button>
-
-              <button
-                type="button"
-                onClick={() => handleQuickLogin('admin@entreskill.com')}
-                className="sm:col-span-2 group flex items-center justify-between p-3.5 border border-red-200 rounded-xl hover:bg-red-50/50 text-slate-700 font-bold text-sm transition-all hover:border-red-400 shadow-sm"
-              >
-                <div className="text-left min-w-0 flex items-center space-x-2">
-                  <ShieldAlert className="w-4 h-4 text-red-500" />
-                  <div>
-                    <p className="text-red-700 transition-colors font-extrabold text-sm">System Administrator</p>
-                    <p className="text-xs text-red-400 font-medium uppercase tracking-wider mt-0.5">Full Telemetry Controls</p>
-                  </div>
-                </div>
-                <ArrowRight className="w-3.5 h-3.5 text-red-400 group-hover:translate-x-0.5 transition-all" />
-              </button>
-            </div>
           </div>
 
         </div>
