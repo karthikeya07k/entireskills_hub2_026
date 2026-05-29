@@ -15,14 +15,9 @@ const seedData = async () => {
     await mongoose.connect(connStr);
     console.log('MongoDB connected for seeding...');
 
-    // Clear existing data
-    await User.deleteMany({});
-    await BusinessIdea.deleteMany({});
-    await Roadmap.deleteMany({});
-    await Lesson.deleteMany({});
-    await Message.deleteMany({});
-    await UserRoadmapProgress.deleteMany({});
-    console.log('Cleared all existing collections.');
+    // Drop database to guarantee all old data is wiped out completely
+    await mongoose.connection.dropDatabase();
+    console.log('Database dropped successfully.');
 
     // 1. Seed Upgraded Users (Mentor profiles match the updated professional categories)
     const users = [
@@ -504,7 +499,7 @@ const seedData = async () => {
 
 
     // ==========================================
-    // 8. Seed some initial messages to populate student/mentor chats
+    // Seed some initial messages to populate student/mentor chats
     // ==========================================
     const studentUser = seededUsers.find(u => u.role === 'user');
     const chefMentor = seededUsers.find(u => u.email === 'chef.raj@entreskill.com');
